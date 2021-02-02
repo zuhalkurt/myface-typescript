@@ -27,7 +27,7 @@
     "express-validator": "^6.9.2",
     "knex": "^0.21.16",
     "moment": "^2.29.1",
-    "sqlite3": "^5.0.1",
+    "sqlite3": "^5.0.0",
     "ts-node": "^9.1.1"
   }
 }
