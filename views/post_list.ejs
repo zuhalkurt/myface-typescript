@@ -4,9 +4,18 @@
 <body>
 <h1>Posts</h1>
 <ol>
+
     <% results.forEach(function(post) {%>
         <li>
-            <%= post.message %>
+            <img 
+                src="<%=post.imageUrl %>"
+                alt="Post image"
+                width="100"
+                height="100"
+            />
+            <p><%= post.message %> </p>
+            <p><em> Posted by</em> <%= post.postedBy.name %></p>
+            <p><em> Liked by</em> <%= post.likedBy.name %> <em> Disliked by</em> <%= post.dislikedBy.name %></p>
         </li>
     <% }); %>
 </ol>
