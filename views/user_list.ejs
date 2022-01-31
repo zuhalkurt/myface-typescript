@@ -9,7 +9,7 @@
         <li class="user">
             <img class="user-image" src="<%= user.profileImageUrl %>" alt="<%= user.name %>" width="50" height="50" />
            <p class="user-user-name">User name: <%= user.name %></p>
-           <a href="<%= user.id %>"> Go Profile  </a>
+           <a href="/users/<%= user.id %>"> Go Profile  </a>
         </li>
    
     <% }); %>
