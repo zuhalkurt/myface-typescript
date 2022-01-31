@@ -11,11 +11,10 @@ body {
     padding: 1em;
     margin-bottom: 1em;
     margin-right: 0;
+    margin-left: 0em;
     width: 100%;
     border-radius: 25px;
-    box-sizing: border-box;
-
-    
+    box-sizing: border-box; 
 }
 
 @media (min-width: 600px) and (max-width: 900px) {
@@ -25,12 +24,16 @@ body {
 }
 @media (min-width: 900px) {
     .post {
-        width: calc((100% - 3em) / 4)
+        width: calc((100% - 3em) / 3)
     }
 }
 @media (max-width: 600px) {
     .post {
         width: calc((100% - 1em))
+    }
+
+    .post-list{
+        justify-content: center !important;
     }
 }
 
@@ -46,7 +49,12 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+<<<<<<< HEAD
     padding: 0;   
+=======
+    padding: 0;
+    
+>>>>>>> zuhal
     
 }
 .post-image {
@@ -57,26 +65,46 @@ body {
 
 
 .user {
-    background-color:#8E8FC4 ;
+    background-color: #8E8FC4 ;
     padding: 1em;
     margin-bottom: 1em;
-    width: 25%;
+    margin-right: 0;
+    margin-left: 0em;
+    width: 100%;
     border-radius: 25px;
-    
+    box-sizing: border-box; 
 }
+    
 
+
+@media (min-width: 600px) and (max-width: 900px) {
+    .user {
+        width: calc((100% - 2em) / 2)
+    }
+}
+@media (min-width: 900px) {
+    .user {
+        width: calc((100% - 3em) / 3)
+    }
+}
 @media (max-width: 600px) {
     .user {
-        width: 100%;
-        margin-bottom: 20px; 
+        width: calc((100% - 1em))
+    }
+
+    .user-list{
+        justify-content: center !important;
     }
 }
 
 
 .user-list {
-    margin: 0 -5px;
     list-style-type: none;
     text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0;
 }
 .user-image {
     
@@ -89,8 +117,8 @@ body {
     text-align: center;
     padding: 0;
     margin-bottom: 1em;
-    margin-left: 1.2em;
-    margin-right: 1.2em;
+    margin-left: 0;
+    margin-right:0;
     border-radius: 25px;
   }
 

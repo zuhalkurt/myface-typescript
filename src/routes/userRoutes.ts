@@ -37,9 +37,8 @@ router.post('/create/',
 
 router.get('/:userId/', async (request, response) => {
     const userId = parseInt(request.params.userId);
-
     const user = await getUser(userId);
-    return response.render('user_detail', user);
+    return response.render('user_detail',{user:user});
 });
 
 export default router;
