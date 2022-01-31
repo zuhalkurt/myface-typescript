@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* Add your styles here. */
 html {
     background-color: #252A38;
@@ -32,3 +33,102 @@ li {
       flex: calc((100% -3em) / 4)
     }
 }
+=======
+
+
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: #6E6ABE ;
+    color: #401E39;
+}
+
+.post {
+    background-color: #8E8FC4 ;
+    padding: 1em;
+    margin-bottom: 1em;
+    margin-right: 0;
+    width: 100%;
+    border-radius: 25px;
+    box-sizing: border-box;
+
+    
+}
+
+@media (min-width: 600px) and (max-width: 900px) {
+    .post {
+        width: calc((100% - 2em) / 2)
+    }
+}
+@media (min-width: 900px) {
+    .post {
+        width: calc((100% - 3em) / 4)
+    }
+}
+@media (max-width: 600px) {
+    .post {
+        width: calc((100% - 1em))
+    }
+}
+
+
+
+.post .post-posted-by {
+    font-style: italic;
+    
+}
+.post-list {
+    list-style-type: none;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    
+    
+}
+.post-image {
+   
+    text-align: center;
+    background-color: #f1f1f1;
+}
+
+
+.user {
+    background-color:#8E8FC4 ;
+    padding: 1em;
+    margin-bottom: 1em;
+    width: 25%;
+    border-radius: 25px;
+    
+}
+
+@media (max-width: 600px) {
+    .user {
+        width: 100%;
+        margin-bottom: 20px; 
+    }
+}
+
+
+.user-list {
+    margin: 0 -5px;
+    list-style-type: none;
+    text-align: center;
+}
+.user-image {
+    
+    text-align: center;
+    background-color: #f1f1f1;
+    border-radius: 50%;
+}
+.page-header {
+    background-color:#8E8FC4 ;
+    text-align: center;
+    padding: 1em;
+    margin-bottom: 1em;
+    margin-left: 1.2em;
+    margin-right: 1.2em;
+    border-radius: 25px;
+  }
+
+ 
+>>>>>>> zuhal

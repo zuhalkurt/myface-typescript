@@ -2,6 +2,7 @@
 <%- include('_head') -%>
 <%- include('_header') -%>
 <body>
+<<<<<<< HEAD
 <h1>Posts</h1>
 <ol class="post container">
 
@@ -17,6 +18,16 @@
             <p><%= post.userID %> </p>
             <p>Posted by <%= post.postedBy.name %></p>
             <p>Liked by<%= post.likedBy.name %> Disliked by <%= post.dislikedBy.name %></p>
+=======
+<h1 class="page-header">Posts</h1>
+<ol class="post-list">
+
+    <% results.forEach(function(post) {%>
+        <li class="post">
+            <img class="post-image" src="<%=post.imageUrl %>" alt="Post image" width="100" height="100" />
+            <p class="post-message"><%= post.message %> </p>
+            <p class="post-posted-by"> Posted by <%= post.postedBy.name %></p>
+>>>>>>> zuhal
         </li>
     <% }); %>
 </ol>
