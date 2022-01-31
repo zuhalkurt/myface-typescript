@@ -10,9 +10,17 @@
             <img class="post-image" src="<%=post.imageUrl %>" alt="Post image" width="100" height="100" />
             <p class="post-message"><%= post.message %> </p>
             <p class="post-posted-by"> Posted by <%= post.postedBy.name %></p>
+            <p>Likes <%= post.likedBy.length %></p>
+            <p>Dislikes <%= post.dislikedBy.length %></p>
         </li>
     <% }); %>
 </ol>
+<%if (next) { %>
+    <a href="<%= next %>">Next</a>
+<% } %>
+<%if (previous) { %>
+    <a href="<%= previous %>">Previous</a>
+<% } %>
 </body>
 <%- include('_footer') -%>
 </html>
