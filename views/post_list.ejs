@@ -3,11 +3,11 @@
 <%- include('_header') -%>
 <body>
 <h1>Posts</h1>
-<ol>
+<ol class="post container">
 
     <% results.forEach(function(post) {%>
-        <li>
-            <img 
+        
+            <img
                 src="<%=post.imageUrl %>"
                 alt="Post image"
                 width="100"
@@ -15,8 +15,8 @@
             />
             <p><%= post.message %> </p>
             <p><%= post.userID %> </p>
-            <p><em> Posted by</em> <%= post.postedBy.name %></p>
-            <p><em> Liked by</em> <%= post.likedBy.name %> <em> Disliked by</em> <%= post.dislikedBy.name %></p>
+            <p>Posted by <%= post.postedBy.name %></p>
+            <p>Liked by<%= post.likedBy.name %> Disliked by <%= post.dislikedBy.name %></p>
         </li>
     <% }); %>
 </ol>
