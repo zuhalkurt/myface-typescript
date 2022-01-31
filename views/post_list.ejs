@@ -12,6 +12,14 @@
             <p class="post-posted-by"> Posted by <%= post.postedBy.name %></p>
             <p>Likes <%= post.likedBy.length %></p>
             <p>Dislikes <%= post.dislikedBy.length %></p>
+            <form action="/posts/<%=post.id %>" method="POST">
+                <input type="hidden" name="like" value="LIKE">
+                <input type="submit" value="LIKE">
+            </form>
+            <form action="/posts/<%=post.id %>" method="POST">
+                <input type="hidden" name="dislike" value="true">
+                <input type="submit" value="DISLIKE">
+            </form>
         </li>
     <% }); %>
 </ol>

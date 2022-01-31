@@ -46,7 +46,7 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    
+    padding: 0;   
     
 }
 .post-image {
@@ -87,7 +87,7 @@ body {
 .page-header {
     background-color:#8E8FC4 ;
     text-align: center;
-    padding: 1em;
+    padding: 0;
     margin-bottom: 1em;
     margin-left: 1.2em;
     margin-right: 1.2em;
