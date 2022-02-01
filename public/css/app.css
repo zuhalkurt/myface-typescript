@@ -80,6 +80,41 @@ header a:hover {
     width: 100%;
     box-sizing: border-box; 
 }
+.wrapper {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-auto-rows: 4fr 1fr;
+    height:50vh;
+    width: 100vw;
+}
+
+.user-cover-image {
+    grid-column-start: 1;
+    grid-column-end: 5;
+    grid-row-start: 1;
+    grid-row-end: 5;
+    width: 100%;
+    height: 100%;
+}
+
+.user-image-detail {
+    border-radius: 50%;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 4;
+    grid-row-end: 5;
+    width: 10vh;
+    height: 10vh;
+}
+
+.user-name {
+    grid-column-start: 1;
+    grid-column-end: 5;
+    grid-row-start: 4;
+    grid-row-end: 5;
+    background-color: #252A38;
+    opacity: .56;
+}
 
 @media (min-width: 600px) and (max-width: 900px) {
     .user {

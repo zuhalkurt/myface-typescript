@@ -2,9 +2,11 @@
 <%- include('_head') -%>
 <%- include('_header') -%>
 <body>
+<div class="wrapper">
 <img class="user-cover-image" src="<%= coverImageUrl %>" alt="<%= name %>"/>
-<img class="user-image" src="<%= profileImageUrl %>" alt="<%= name %>" width="50" height="50" />
-<h1><%= name %></h1>
+<img class="user-image-detail" src="<%= profileImageUrl %>" alt="<%= name %>" />
+<h1 class="user-name"> <%= name %></h1>
+</div>
     <p><%= username %></p>
     <p><%= email %></p>
     <h2><%= name.split(" ")[0] %>'s Posts</h2>
