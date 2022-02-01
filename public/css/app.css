@@ -1,6 +1,6 @@
 html {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: DCDCDC;
+    color: #DCDCDC;
     background-color: #252A38;
 }
 
@@ -14,7 +14,7 @@ header a {
 }
 
 header a:visited {
-    color: DCDCDC;
+    color: #DCDCDC;
 }
 
 header a:hover {
@@ -60,7 +60,9 @@ header a:hover {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding: 0;
+    padding: 16px;
+    margin-right: 24px;
+    margin-bottom: 40px;
     
     
 }
@@ -71,12 +73,11 @@ header a:hover {
 }
 
 .user {
-    padding: 1em;
+    background-color: #151820;
     margin-bottom: 1em;
     margin-right: 0;
     margin-left: 0em;
     width: 100%;
-    border-radius: 25px;
     box-sizing: border-box; 
 }
 
@@ -106,11 +107,9 @@ header a:hover {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding: 0;
-}
-
-.user-cover-image {
-   
+    padding: 16px;
+    margin-right: 24px;
+    margin-bottom: 40px;
 }
 
 .user-image {
@@ -126,5 +125,14 @@ header a:hover {
     margin-right:0;
     border-radius: 25px;
   }
-
+nav {
+    list-style-type: none;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 16px;
+    margin-right: 24px;
+    margin-bottom: 40px;
+}
  
