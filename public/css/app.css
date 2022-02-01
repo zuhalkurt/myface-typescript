@@ -17,6 +17,10 @@ header a:visited {
     color: DCDCDC;
 }
 
+header a:hover {
+    color: #2985FF
+}
+
 .post {
     background-color: #151820;
     margin-bottom: 1em;
