@@ -2,49 +2,46 @@
 <%- include('_head') -%>
 <%- include('_header') -%>
 <body>
-<h1>User Detail Page</h1>
-<img src="<%= user.coverImageUrl %>" alt="<%= user.name %>" />
-<img class="user-image" src="<%= user.profileImageUrl %>" alt="<%= user.name %>" width="50" height="50" />
-<p><%= user.name %></p>
-<p><%= user.username %></p>
-<p><%= user.email %></p>
-<h2><%= user.name.split(" ")[0] %>'s Posts</h2>
-<ol class="post-list">
-    <% user.posts.slice(0,6).forEach(function(post) {%>
-        <li class="post">
-        <img class="post-image" src="<%=post.imageUrl %>" alt="Post image" width="100" height="100" />
-        <p><%= user.username %></p>
-        <p><%= post.createdAt.slice(0, 10) %></p>
-        <p><%= post.message %></p>
-        </li>
-    <% }); %>
-</ol>
-<button>Load More</button>
-<h2>Post <%= user.name.split(" ")[0] %> Liked</h2>
-<ol class="post-list">
-    <% user.likes.slice(0,6).forEach(function(post) {%>
-        <li class="post">
-        <img class="post-image" src="<%=post.imageUrl %>" alt="Post image" width="100" height="100" />
-        <p><%= user.username %></p>
-        <p><%= post.createdAt.slice(0, 10) %></p>
-        <p><%= post.message %></p>
-        </li>
-    <% }); %>
-</ol>
-<button>Load More</button>
-<h2>Post <%= user.name.split(" ")[0] %> Disliked</h2>
-<ol class="post-list">
-    <% user.dislikes.slice(0,6).forEach(function(post) {%>
-        <li class="post">
-        <img class="post-image" src="<%=post.imageUrl %>" alt="Post image" width="100" height="100" />
-        <p><%= user.username %></p>
-        <p><%= post.createdAt.slice(0, 10) %></p>
-        <p><%= post.message %></p>
-        </li>
-    <% }); %>
-</ol>
-<button>Load More</button>
-
+<img class="user-cover-image" src="<%= coverImageUrl %>" alt="<%= name %>"/>
+<img class="user-image" src="<%= profileImageUrl %>" alt="<%= name %>" width="50" height="50" />
+<h1><%= name %></h1>
+    <p><%= username %></p>
+    <p><%= email %></p>
+    <h2><%= name.split(" ")[0] %>'s Posts</h2>
+    <ol class="post-list">
+        <% posts.forEach(function(post) {%>
+            <li class="post">
+            <img class="post-image" src="<%= post.imageUrl %>" alt="Post image" width="100" height="100" />
+            <p><%= post.message %></p>
+            </li>
+        <% }); %>
+    </ol>
+    <button>Load More</button>
+    <h2>Posts <%= name.split(" ")[0] %> Liked</h2>
+    <ol class="post-list">
+        <% likes.forEach(function(post) {%>
+            <li class="post">
+            <img class="post-image" src="<%=post.imageUrl %>" alt="Post image" width="100" height="100" />
+            <p><%= post.username %></p>
+            <p><%= post.createdAt.slice(0, 10) %></p>
+            <p><%= post.message %></p>
+            </li>
+        <% }); %>
+    </ol>
+    <button>Load More</button>
+    <h2>Posts <%= name.split(" ")[0] %> Disliked</h2>
+    <ol class="post-list">
+        <% dislikes.forEach(function(post) {%>
+            <li class="post">
+            <img class="post-image" src="<%=post.imageUrl %>" alt="Post image" width="100" height="100" />
+            <p><%= post.username %></p>
+            <p><%= post.createdAt.slice(0, 10) %></p>
+            <p><%= post.message %></p>
+            </li>
+        <% }); %>
+    </ol>
+    <button>Load More</button>
+    
 </body>
 <%- include('_footer') -%>
 </html>
