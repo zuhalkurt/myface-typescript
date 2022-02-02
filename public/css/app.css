@@ -1,8 +1,7 @@
+  
 * {
     margin: 0;
 }
-
-
 
 html {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -26,20 +25,56 @@ header a:visited {
 header a:hover {
     color: #2985FF
 }
+/* Side navigation menu */
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    padding-top: 60px;
+    transition: 0.5s;
+}
+/* The navigation menu links */
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+.sidenav a:hover {
+    color: #2985FF
+}
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
 .container {
     height: 245px;
     margin: 0;
 }
 .profile-cover-image {
-    height: 162px;
-  
-    
+    height: 162px;  
 }
 .profile-cover-image img {
     height: 100%;
-    object-fit: cover;
-    background-position: bottom;
+    background-size: cover;
+    position: relative;
+    background-position: center;
+    background-repeat: no-repeat;
 }
+.responsive {
+    width: 100%;
+    height: auto;
+  }
 .profile {
     position: relative;
 }
@@ -47,34 +82,27 @@ header a:hover {
     display: flex;
     flex-direction: row;
     background-color: rgba(37, 42, 56, 0.562);
-    border-top-left-radius: 100%;
+    border-top-left-radius: 0;
     border-bottom-left-radius: 100%;
     width: 100%;
     position: absolute;
     top: -54px;
     align-items: center;
     gap: 24px;
-    
-
-    
 }
 .user-image {
     margin-left: 24px;
-
 }
 .user-image img {
     width: 100px;
     height: 100px;
     border-radius: 100%;
     border: 5px solid white;
- 
-    
+    vertical-align: middle;
 }
 .profile-info {
-    width: 100%;
-    
+    width: 100%;  
 }
-
 .profile-info h1{
     margin-bottom: 10px;
     font-weight: 400;
@@ -97,9 +125,6 @@ header a:hover {
 .gutter-left {
     margin-left: 16px;
 }
-
-
-
 .post {
     background-color: #151820;
     margin-bottom: 1em;
@@ -108,23 +133,67 @@ header a:hover {
     width: 100%;
     box-sizing: border-box; 
 }
-
 @media (min-width: 600px) and (max-width: 900px) {
+    .user {
+        width: calc((100% - 2em) / 2)
+    }
     .post {
         width: calc((100% - 2em) / 2)
+    }
+    .sidenav {
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        right: 0;
+        background-color: #111;
+        overflow-x: hidden;
+        padding-top: 60px;
+        transition: 0.5s;
+    }
+    /* The navigation menu links */
+    .sidenav a {
+        padding: 8px 8px 8px 32px;
+        text-decoration: none;
+        font-size: 25px;
+        color: #818181;
+        display: block;
+        transition: 0.3s;
     }
 }
 @media (min-width: 900px) {
     .post {
         width: calc((100% - 3em) / 3)
     }
+    .user {
+        width: calc((100% - 3em) / 3)
+    }
+    .sidenav {
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        right: 0;
+        background-color: #111;
+        overflow-x: hidden;
+        padding-top: 60px;
+        transition: 0.5s;
+    }
+    /* The navigation menu links */
+    .sidenav a {
+        padding: 8px 8px 8px 32px;
+        text-decoration: none;
+        font-size: 25px;
+        color: #818181;
+        display: block;
+        transition: 0.3s;
+    }
 }
-
-
     .post-list{
         justify-content: center !important;
     }
-
 .post .post-posted-by {
     font-style: italic;
 }
@@ -136,28 +205,18 @@ header a:hover {
 }
 .post-list {
     list-style-type: none;
-    /* text-align: center;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap; */
     padding: 16px;
     margin-right: 24px;
     margin-bottom: 40px;
     display:inline-flex;
     flex-direction: row;
-    gap: 24px;
-
-    
-    
+    gap: 24px; 
 }
 .post {
     width: 266px;
     height: 272px;
-
 }
-
 .post p {
-    
     white-space: initial;
 }
 .post-image {
@@ -165,7 +224,6 @@ header a:hover {
     width: 100%;
     height: 50%;
 }
-
 .user {
     background-color: #151820;
     margin-bottom: 1em;
@@ -174,47 +232,21 @@ header a:hover {
     width: 100%;
     box-sizing: border-box; 
 }
-
-@media (min-width: 600px) and (max-width: 900px) {
-    .user {
-        width: calc((100% - 2em) / 2)
+    /* The navigation menu links */
+    .sidenav a {
+        padding: 8px 8px 8px 32px;
+        text-decoration: none;
+        font-size: 25px;
+        color: #818181;
+        display: block;
+        transition: 0.3s;
     }
-    nav {
-        list-style-type: none;
-        text-align: center;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
-        padding: 16px;
-        margin-right: 24px;
-        margin-bottom: 40px;
-        
-    }
-}
-@media (min-width: 900px) {
-    .user {
-        width: calc((100% - 3em) / 3)
-    }
-    nav {
-        list-style-type: none;
-        text-align: center;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
-        padding: 16px;
-        margin-right: 24px;
-        margin-bottom: 40px;
-        
-    }
-}
-
- .user-list{
+.user-list{
         justify-content: center !important;
     }
 .post-list{
         justify-content: center !important;
     }
-
 .user-list {
     list-style-type: none;
     text-align: center;
@@ -230,7 +262,6 @@ header a:hover {
     text-align: center;
     border-radius: 50%;
 }
-
 .page-header {
     text-align: center;
     padding: 0;
@@ -241,5 +272,4 @@ header a:hover {
   }
 nav {
     display: none;
-
 }

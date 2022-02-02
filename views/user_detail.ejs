@@ -4,7 +4,7 @@
 <body>
 <div class= "container">
     <div class="profile-cover-image">
-        <img src="<%= coverImageUrl %>" alt="<%= name %>"/>
+        <img src="<%= coverImageUrl %>" alt="<%= name %>" class="responsive"/>
     </div>
 <div class="profile">
     <div class="Profile-wrapper">
@@ -25,13 +25,15 @@
         <% posts.forEach(function(post) {%>
             <li class="post">
             <img class="post-image" src="<%= post.imageUrl %>" alt="Post image" width="100" height="100" />
+            <p class="bold"><%= username %></p>
+            <p><%= post.createdAt.slice(0, 10) %></p>
             <p><%= post.message %></p>
             </li>
         <% }); %>
     </ol>
 </div>
     <button>Load More</button>
-    <h2>Posts <%= name.split(" ")[0] %> Liked</h2>
+    <h2 class="sub-title gutter-left">Posts <%= name.split(" ")[0] %> Liked</h2>
     <div class="scroll">
     <ol class="post-list">
         <% likes.forEach(function(post) {%>
@@ -45,7 +47,7 @@
     </ol>
 </div>
     <button>Load More</button>
-    <h2>Posts <%= name.split(" ")[0] %> Disliked</h2>
+    <h2 class="sub-title gutter-left">Posts <%= name.split(" ")[0] %> Disliked</h2>
     <ol class="post-list">
         <% dislikes.forEach(function(post) {%>
             <li class="post">
