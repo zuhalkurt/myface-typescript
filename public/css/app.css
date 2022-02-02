@@ -20,10 +20,11 @@ header a:visited {
 header a:hover {
     color: #2985FF
 }
-nav {
+
+.display-nav {
     list-style-type: none;
     text-align: center;
-    display: flex;
+    display: none;
     flex-wrap: wrap;
     justify-content: space-between;
     padding: 16px;
