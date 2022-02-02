@@ -2,12 +2,25 @@
 <%- include('_head') -%>
 <%- include('_header') -%>
 <body>
-<img class="user-cover-image" src="<%= coverImageUrl %>" alt="<%= name %>"/>
-<img class="user-image" src="<%= profileImageUrl %>" alt="<%= name %>" width="50" height="50" />
-<h1><%= name %></h1>
-    <p><%= username %></p>
-    <p><%= email %></p>
-    <h2><%= name.split(" ")[0] %>'s Posts</h2>
+<div class= "container">
+    <div class="profile-cover-image">
+        <img src="<%= coverImageUrl %>" alt="<%= name %>"/>
+    </div>
+<div class="profile">
+    <div class="Profile-wrapper">
+        <div class="user-image">
+            <img src="<%= profileImageUrl %>" alt="<%= name %>" width="50" height="50" />
+        </div>
+        <div class="profile-info">
+            <h1><%= name %></h1>
+            <p class="bold"><%= username %></p>
+            <p><%= email %></p>
+        </div>
+    </div>
+</div>
+ </div>
+    <h2 class="sub-title gutter-left"><%= name.split(" ")[0] %>'s Posts</h2>
+    <div class="scroll">
     <ol class="post-list">
         <% posts.forEach(function(post) {%>
             <li class="post">
@@ -16,8 +29,10 @@
             </li>
         <% }); %>
     </ol>
+</div>
     <button>Load More</button>
     <h2>Posts <%= name.split(" ")[0] %> Liked</h2>
+    <div class="scroll">
     <ol class="post-list">
         <% likes.forEach(function(post) {%>
             <li class="post">
@@ -28,6 +43,7 @@
             </li>
         <% }); %>
     </ol>
+</div>
     <button>Load More</button>
     <h2>Posts <%= name.split(" ")[0] %> Disliked</h2>
     <ol class="post-list">
