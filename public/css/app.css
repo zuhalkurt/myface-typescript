@@ -2,23 +2,33 @@ html {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: #DCDCDC;
     background-color: #252A38;
+    line-height: 20px;
+    font-size: 14px;
 }
 
+/* NAV BAR */
 header {
     background-color: #151820;
     font-size: 24px;
 }
-
 header a {
     text-decoration: none;
 }
-
 header a:visited {
     color: #DCDCDC;
 }
-
 header a:hover {
     color: #2985FF
+}
+nav {
+    list-style-type: none;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 16px;
+    margin-right: 24px;
+    margin-bottom: 40px;
 }
 
 .post {
@@ -62,10 +72,9 @@ header a:hover {
     justify-content: space-between;
     padding: 16px;
     margin-right: 24px;
-    margin-bottom: 40px;
-    
-    
+    margin-bottom: 40px; 
 }
+
 .post-image {
     text-align: center;
     width: 100%;
@@ -80,40 +89,48 @@ header a:hover {
     width: 100%;
     box-sizing: border-box; 
 }
+
 .wrapper {
-    display: grid;
-    grid-template-columns: 1fr 4fr;
-    grid-auto-rows: 4fr 1fr;
-    height:50vh;
-    width: 100vw;
+    display: grid; 
+    grid-auto-rows: 1fr; 
+    grid-template-columns: 0.1fr .5fr .5fr 2.4fr;  
+    grid-template-rows: 1fr 1fr 1fr 1fr; 
 }
 
 .user-cover-image {
-    grid-column-start: 1;
-    grid-column-end: 5;
-    grid-row-start: 1;
-    grid-row-end: 5;
-    width: 100%;
+    grid-area: 1 / 1 / 4 / 5;
     height: 100%;
-}
-
-.user-image-detail {
-    border-radius: 50%;
-    grid-column-start: 1;
-    grid-column-end: 2;
-    grid-row-start: 4;
-    grid-row-end: 5;
-    width: 10vh;
-    height: 10vh;
+    width: 100%;
+    object-fit: cover;
 }
 
 .user-name {
-    grid-column-start: 1;
-    grid-column-end: 5;
-    grid-row-start: 4;
-    grid-row-end: 5;
+    grid-area: 3 / 3 / 4 / 5;
     background-color: #252A38;
     opacity: .56;
+    font-size: 20px;
+    font-weight: 300;
+    height: 100%;
+    align-self: center;
+    text-align: center;
+}
+
+.margin { 
+    grid-area: 1 / 1 / 5 / 2; 
+}
+
+.email {
+    grid-area: 4 / 4 / 5 / 5;
+}
+
+.user-image-detail {
+    grid-area: 3 / 2 / 5 / 4;
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+    border-style: solid;
+    border-color: #DCDCDC;
+    z-index: 3;
 }
 
 @media (min-width: 600px) and (max-width: 900px) {
@@ -125,6 +142,7 @@ header a:hover {
     .user {
         width: calc((100% - 3em) / 3)
     }
+
 }
 @media (max-width: 600px) {
     .user {
@@ -160,14 +178,5 @@ header a:hover {
     margin-right:0;
     border-radius: 25px;
   }
-nav {
-    list-style-type: none;
-    text-align: center;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    padding: 16px;
-    margin-right: 24px;
-    margin-bottom: 40px;
-}
+
  
