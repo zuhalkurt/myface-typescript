@@ -8,32 +8,45 @@ html {
 
 /* NAV BAR */
 
-.display-nav a:visited {
+header span {
+    float: right;
+}
+
+.sidenav a:visited {
     color: #DCDCDC;
 }
-.display-nav a:hover {
+.sidenav a:hover {
     color: #2985FF
 }
 
-.display-nav {
-    overflow: hidden;
-    position: relative;
-    font-size: 24px;
-    z-index: 2;
-    transition: 0.32s;
-}
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+  }
 
-.display-nav #myLinks {
-    display: none;
-}
-
-.display-nav a {
-    color: #DCDCDC;
-    padding: 14px 16px;
+.sidenav a {
+    padding: 8px 8px 8px 32px;
     text-decoration: none;
-    font-size: 17px;
+    font-size: 25px;
+    color: #818181;
     display: block;
-    text-align: right;
+    transition: 0.3s;
+  }
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
 }
 
 .post {
