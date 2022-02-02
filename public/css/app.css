@@ -140,27 +140,9 @@ header a:hover {
     .post {
         width: calc((100% - 2em) / 2)
     }
-    .sidenav {
-        height: 100%;
-        width: 0;
-        position: fixed;
-        z-index: 1;
-        top: 0;
-        right: 0;
-        background-color: #111;
-        overflow-x: hidden;
-        padding-top: 60px;
-        transition: 0.5s;
-    }
+   
     /* The navigation menu links */
-    .sidenav a {
-        padding: 8px 8px 8px 32px;
-        text-decoration: none;
-        font-size: 25px;
-        color: #818181;
-        display: block;
-        transition: 0.3s;
-    }
+   
 }
 @media (min-width: 900px) {
     .post {
@@ -169,27 +151,7 @@ header a:hover {
     .user {
         width: calc((100% - 3em) / 3)
     }
-    .sidenav {
-        height: 100%;
-        width: 0;
-        position: fixed;
-        z-index: 1;
-        top: 0;
-        right: 0;
-        background-color: #111;
-        overflow-x: hidden;
-        padding-top: 60px;
-        transition: 0.5s;
-    }
-    /* The navigation menu links */
-    .sidenav a {
-        padding: 8px 8px 8px 32px;
-        text-decoration: none;
-        font-size: 25px;
-        color: #818181;
-        display: block;
-        transition: 0.3s;
-    }
+   
 }
     .post-list{
         justify-content: center !important;
@@ -232,15 +194,6 @@ header a:hover {
     width: 100%;
     box-sizing: border-box; 
 }
-    /* The navigation menu links */
-    .sidenav a {
-        padding: 8px 8px 8px 32px;
-        text-decoration: none;
-        font-size: 25px;
-        color: #818181;
-        display: block;
-        transition: 0.3s;
-    }
 .user-list{
         justify-content: center !important;
     }
@@ -270,6 +223,3 @@ header a:hover {
     margin-right:0;
     border-radius: 25px;
   }
-nav {
-    display: none;
-}
