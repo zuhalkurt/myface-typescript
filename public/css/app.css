@@ -2,15 +2,12 @@ html {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: #DCDCDC;
     background-color: #252A38;
+    margin: 0;
     line-height: 20px;
     font-size: 14px;
 }
 
 /* NAV BAR */
-
-header span {
-    float: right;
-}
 
 .sidenav a:visited {
     color: #DCDCDC;
@@ -18,29 +15,32 @@ header span {
 .sidenav a:hover {
     color: #2985FF
 }
-
 .sidenav {
     height: 100%;
     width: 0;
     position: fixed;
-    z-index: 1;
+    z-index: 5;
     top: 0;
     right: 0;
-    background-color: #111;
+    background-color: #151820;
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 60px;
+  }
+#nav-icon {
+    position: fixed;
+    top: 25px;
+    right: 25px;
   }
 
 .sidenav a {
     padding: 8px 8px 8px 32px;
     text-decoration: none;
     font-size: 25px;
-    color: #818181;
+    color: #DCDCDC;
     display: block;
     transition: 0.3s;
   }
-
 .sidenav .closebtn {
     position: absolute;
     top: 0;
@@ -48,6 +48,7 @@ header span {
     font-size: 36px;
     margin-left: 50px;
 }
+
 
 .post {
     background-color: #151820;
@@ -113,14 +114,15 @@ header span {
 .wrapper {
     display: grid; 
     grid-auto-rows: 1fr; 
-    grid-template-columns: 0.1fr .5fr .5fr 2.4fr;  
-    grid-template-rows: 1fr 1fr 1fr 1fr; 
+    grid-template-columns: 0.1fr .5fr .5fr 2.5fr;  
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    width: 100vw;
 }
 
 .user-cover-image {
     grid-area: 1 / 1 / 4 / 5;
-    height: 100%;
-    width: 100%;
+    width: 100vw;
+    height: 40vh;
     object-fit: cover;
 }
 
@@ -146,11 +148,13 @@ header span {
 .user-image-detail {
     grid-area: 3 / 2 / 5 / 4;
     border-radius: 50%;
-    width: 100%;
-    height: 100%;
+    width: 15vh;
+    height: 15vh;
     border-style: solid;
     border-color: #DCDCDC;
     z-index: 3;
+    align-content: center;
+    justify-content: center;
 }
 
 @media (min-width: 600px) and (max-width: 900px) {
